@@ -1,0 +1,157 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.4 Safari/605.1.15" version="27.0.6">
+  <diagram name="Page-1" id="qCQBoRJt0O49EkEic1T_">
+    <mxGraphModel dx="1216" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Inicio -->
+        <mxCell id="start" value="Inicio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="400" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Leer nombre -->
+        <mxCell id="input_name" value="Leer nombre del usuario" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="start" target="input_name">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Inicializar puntos -->
+        <mxCell id="init_points" value="Puntos = 12" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="input_name" target="init_points">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lanzar dados -->
+        <mxCell id="roll_dice" value="Lanzar 3 dados (azar)" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="270" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="init_points" target="roll_dice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ¿3 dados iguales? -->
+        <mxCell id="check_all_equal" value="¿Los 3 dados son iguales?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="350" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="conn4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="roll_dice" target="check_all_equal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Sí: Sumar 40 puntos -->
+        <mxCell id="add_40" value="Sumar 40 puntos" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="600" y="350" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn5" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_all_equal" target="add_40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ¿Al menos 2 dados iguales? -->
+        <mxCell id="check_two_equal" value="¿Al menos 2 dados son iguales?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="450" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="conn6" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_all_equal" target="check_two_equal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Sí: Sumar 30 puntos -->
+        <mxCell id="add_30" value="Sumar 30 puntos" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="600" y="450" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn7" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_two_equal" target="add_30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ¿Suma > 14? -->
+        <mxCell id="check_sum" value="¿Suma de dados > 14?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="conn8" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_two_equal" target="check_sum">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Sí: Sumar 20 puntos -->
+        <mxCell id="add_20" value="Sumar 20 puntos" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="600" y="550" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn9" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_sum" target="add_20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Encontrar mayor dado -->
+        <mxCell id="find_max" value="Encontrar el mayor dado" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn10" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_sum" target="find_max">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ¿Mayor es par? -->
+        <mxCell id="check_even" value="¿Mayor es par?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="720" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="conn11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="find_max" target="check_even">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Sí: Sumar mayor * 2 -->
+        <mxCell id="add_max_double" value="Sumar mayor * 2" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="600" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn12" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_even" target="add_max_double">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- No: Sumar mayor -->
+        <mxCell id="add_max" value="Sumar mayor" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="200" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn13" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="check_even" target="add_max">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Mostrar puntos finales -->
+        <mxCell id="output_points" value="Mostrar puntos finales" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="conn14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="add_40" target="output_points">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="add_30" target="output_points">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="add_20" target="output_points">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="add_max_double" target="output_points">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="add_max" target="output_points">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Fin -->
+        <mxCell id="end" value="Fin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="400" y="900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="output_points" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
