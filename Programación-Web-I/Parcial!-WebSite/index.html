@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ni Tan Biónica, Ni Tan Bizarrap - El álbum colaborativo que fusiona pop-rock y electronic/trap. Edición limitada disponible.">
+    <meta name="keywords" content="Tan Biónica, Bizarrap, álbum, música, pop-rock, electronic, trap, Buenos Aires, edición limitada">
+    <meta name="author" content="Ni Tan Biónica, Ni Tan Bizarrap">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ni Tan Biónica, Ni Tan Bizarrap - Álbum Oficial">
+    <meta property="og:description" content="La colaboración épica entre Tan Biónica y Bizarrap. Fusión única de pop-rock y electronic/trap.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/album/album-cover.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ni Tan Biónica, Ni Tan Bizarrap">
+    <meta name="twitter:description" content="La colaboración épica entre Tan Biónica y Bizarrap">
+    <meta name="twitter:image" content="assets/images/album/album-cover.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    
+    <title>Ni Tan Biónica, Ni Tan Bizarrap - Inicio</title>
+    
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/images/album/album-cover.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" as="style">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicAlbum",
+        "name": "Ni Tan Biónica, Ni Tan Bizarrap",
+        "byArtist": [
+            {
+                "@type": "MusicGroup",
+                "name": "Tan Biónica"
+            },
+            {
+                "@type": "Person",
+                "name": "Bizarrap"
+            }
+        ],
+        "genre": ["Pop Rock", "Electronic", "Trap"],
+        "albumReleaseType": "Limited Edition",
+        "description": "Colaboración épica entre Tan Biónica y Bizarrap, fusionando pop-rock con electronic/trap en un álbum de edición limitada."
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Navegación principal">
+            <a href="index.html" class="nav__logo" aria-label="Ir al inicio">
+                NTB x BZRP
+            </a>
+            
+            <button class="nav__toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                ☰
+            </button>
+            
+            <ul class="nav__menu" role="menubar">
+                <li role="none">
+                    <a href="index.html" class="nav__link active" role="menuitem" aria-current="page">Inicio</a>
+                </li>
+                <li role="none">
+                    <a href="about.html" class="nav__link" role="menuitem">Sobre el Artista</a>
+                </li>
+                <li role="none">
+                    <a href="album.html" class="nav__link" role="menuitem">El Álbum</a>
+                </li>
+                <li role="none">
+                    <a href="limited-edition.html" class="nav__link" role="menuitem">Edición Limitada</a>
+                </li>
+                <li role="none">
+                    <a href="contact.html" class="nav__link" role="menuitem">Preventa</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <!-- Particle Background Animation -->
+            <div class="particles" aria-hidden="true">
+                <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+                <div class="particle" style="left: 20%; animation-delay: -1s;"></div>
+                <div class="particle" style="left: 30%; animation-delay: -2s;"></div>
+                <div class="particle" style="left: 40%; animation-delay: -3s;"></div>
+                <div class="particle" style="left: 50%; animation-delay: -4s;"></div>
+                <div class="particle" style="left: 60%; animation-delay: -5s;"></div>
+                <div class="particle" style="left: 70%; animation-delay: -1.5s;"></div>
+                <div class="particle" style="left: 80%; animation-delay: -2.5s;"></div>
+                <div class="particle" style="left: 90%; animation-delay: -3.5s;"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero__content fade-in">
+                    <p class="hero__subtitle">Presentamos</p>
+                    <h1 id="hero-title" class="hero__title glitch-text" data-text="Ni Tan Biónica, Ni Tan Bizarrap">
+                        Ni Tan Biónica, Ni Tan Bizarrap
+                    </h1>
+                    <p class="hero__description">
+                        La colaboración épica que nadie esperaba. Tan Biónica y Bizarrap se unen para crear una fusión única entre el pop-rock porteño y los beats electrónicos más innovadores.
+                    </p>
+                    
+                    <!-- Animated Album Cover -->
+                    <div class="album-cover will-change-transform" role="img" aria-label="Portada del álbum Ni Tan Biónica, Ni Tan Bizarrap">
+                        <img src="assets/images/album/album-cover.jpg" 
+                             alt="Portada oficial del álbum Ni Tan Biónica, Ni Tan Bizarrap" 
+                             class="album-cover__image"
+                             loading="eager"
+                             width="500"
+                             height="500">
+                    </div>
+                    
+                    <div class="hero__cta">
+                        <a href="contact.html" class="btn btn--primary" aria-label="Realizar preventa del álbum">
+                            <span>Preventa Ahora</span>
+                        </a>
+                        <a href="album.html" class="btn btn--secondary" aria-label="Escuchar muestras del álbum">
+                            <span>Escuchar Muestras</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Album Preview Section -->
+        <section class="section section--dark" id="preview" aria-labelledby="preview-title">
+            <div class="container">
+                <div class="fade-in">
+                    <h2 id="preview-title" class="text-center mb-lg">Una Fusión Sin Precedentes</h2>
+                    <div class="grid grid--2">
+                        <div class="card slide-in-left">
+                            <div class="card__content">
+                                <h3 class="card__title">🎸 Tan Biónica</h3>
+                                <p>El legendario sonido pop-rock de Buenos Aires se encuentra con la innovación electrónica. Melodías pegadizas y la inconfundible voz de Chano dan vida a esta colaboración única.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card slide-in-right">
+                            <div class="card__content">
+                                <h3 class="card__title">🎛️ Bizarrap</h3>
+                                <p>Los beats más frescos del trap y electrónica latina. Producciones de vanguardia que han revolucionado la música urbana se fusionan con el rock argentino.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Tracks Preview -->
+                <div class="fade-in mt-xl">
+                    <h3 class="text-center mb-lg">Tracks Destacados</h3>
+                    <div class="grid grid--3">
+                        <div class="card card--flip">
+                            <div class="card__inner">
+                                <div class="card__front">
+                                    <h4 class="card__title">Electric Pastillas</h4>
+                                    <p class="card__content">La colaboración original que une guitarras y trap beats</p>
+                                </div>
+                                <div class="card__back">
+                                    <div class="audio-visualizer">
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                    </div>
+                                    <p>Preview disponible</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card card--flip">
+                            <div class="card__inner">
+                                <div class="card__front">
+                                    <h4 class="card__title">Ciudad Mágica (Remix BZRP)</h4>
+                                    <p class="card__content">El clásico reimaginado con 808s y sintetizadores futuristas</p>
+                                </div>
+                                <div class="card__back">
+                                    <div class="audio-visualizer">
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                    </div>
+                                    <p>Preview disponible</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card card--flip">
+                            <div class="card__inner">
+                                <div class="card__front">
+                                    <h4 class="card__title">Bzrp Music Sessions, Vol. 58</h4>
+                                    <p class="card__content">Chano en una sesión íntima con el toque característico de Bizarrap</p>
+                                </div>
+                                <div class="card__back">
+                                    <div class="audio-visualizer">
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                        <div class="audio-bar"></div>
+                                    </div>
+                                    <p>Preview disponible</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Limited Edition Showcase -->
+        <section class="section section--gradient" id="limited-edition" aria-labelledby="limited-title">
+            <div class="container">
+                <div class="fade-in">
+                    <h2 id="limited-title" class="text-center mb-lg" style="color: var(--color-light);">Edición Limitada</h2>
+                    <div class="flex flex--center flex--column text-center">
+                        <div class="vinyl-record mb-lg"></div>
+                        <h3 class="mb-md" style="color: var(--color-light);">Solo 500 Copias Disponibles</h3>
+                        <p class="mb-lg" style="color: rgba(255,255,255,0.9); max-width: 600px;">
+                            Vinilo en colores neón (púrpura y azul eléctrico), booklet de 24 páginas con letras exclusivas, 
+                            merchandising oficial y póster firmado. Una pieza de colección única.
+                        </p>
+                        <div class="flex gap-md flex-wrap justify-center">
+                            <a href="limited-edition.html" class="btn btn--ghost">Ver Detalles</a>
+                            <a href="contact.html" class="btn btn--secondary">Reservar Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="section section--dark" id="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="fade-in text-center">
+                    <h2 id="cta-title" class="mb-md">¿Listo para la Experiencia?</h2>
+                    <p class="mb-lg" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto var(--space-lg);">
+                        No te pierdas esta colaboración histórica. Accede a preventa exclusiva, 
+                        escucha muestras de todos los tracks y asegura tu copia de edición limitada.
+                    </p>
+                    <div class="flex flex--center gap-lg flex-wrap">
+                        <a href="album.html" class="btn btn--primary">
+                            <span>Explorar Álbum Completo</span>
+                        </a>
+                        <a href="about.html" class="btn btn--secondary">
+                            <span>Conocer a los Artistas</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Artistas</h3>
+                    <ul class="footer__links">
+                        <li><a href="about.html">Tan Biónica</a></li>
+                        <li><a href="about.html">Bizarrap</a></li>
+                        <li><a href="about.html">Colaboración</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Álbum</h3>
+                    <ul class="footer__links">
+                        <li><a href="album.html">Tracklist</a></li>
+                        <li><a href="album.html">Muestras</a></li>
+                        <li><a href="limited-edition.html">Edición Limitada</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Comprar</h3>
+                    <ul class="footer__links">
+                        <li><a href="contact.html">Preventa</a></li>
+                        <li><a href="limited-edition.html">Coleccionista</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Síguenos</h3>
+                    <div class="flex gap-sm">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Spotify">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Ni Tan Biónica, Ni Tan Bizarrap. Todos los derechos reservados.</p>
+                <p>Sitio web creado con HTML5 y CSS3 | Diseño responsivo y accesible</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav__toggle');
+            const navMenu = document.querySelector('.nav__menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    const isOpen = navMenu.classList.contains('active');
+                    navMenu.classList.toggle('active');
+                    navToggle.setAttribute('aria-expanded', !isOpen);
+                });
+            }
+            
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all animation elements
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html> 
