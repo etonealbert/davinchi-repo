@@ -93,6 +93,7 @@ body {
   background-image: var(--gradient-dark);
   min-height: 100vh;
   overflow-x: hidden;
+  padding-top: 120px; /* Add padding to account for fixed header */
 }
 
 /* Typography Hierarchy */
@@ -493,4 +494,117 @@ a:focus {
 ::-moz-selection {
   background: var(--color-primary);
   color: var(--color-light);
+}
+
+/* ============================================================================
+   AUDIO PLAYER STYLES
+   ============================================================================ */
+
+.audio-player {
+  background: rgba(42, 42, 42, 0.8);
+  border-radius: var(--border-radius);
+  padding: var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.audio-player audio {
+  width: 100%;
+  outline: none;
+}
+
+.audio-player audio::-webkit-media-controls-panel {
+  background-color: rgba(26, 26, 26, 0.9);
+}
+
+.audio-player audio::-webkit-media-controls-current-time-display,
+.audio-player audio::-webkit-media-controls-time-remaining-display {
+  color: var(--color-light);
+}
+
+.audio-player audio::-webkit-media-controls-play-button {
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.audio-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: rgba(161, 0, 161, 0.1);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary);
+  margin: var(--space-sm) 0;
+}
+
+.audio-preview-info {
+  flex: 1;
+}
+
+.audio-preview-title {
+  color: var(--color-light);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.audio-preview-duration {
+  color: var(--color-accent);
+  font-size: var(--fs-small);
+}
+
+/* ============================================================================
+   DEVELOPER CREDIT COMPONENT
+   ============================================================================ */
+
+.developer-credit {
+  background: linear-gradient(135deg, rgba(161, 0, 161, 0.1), rgba(0, 212, 255, 0.1));
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  margin: var(--space-xl) 0;
+}
+
+.developer-credit h3 {
+  color: var(--color-primary);
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-sm);
+}
+
+.developer-credit p {
+  color: var(--color-light);
+  margin-bottom: var(--space-md);
+}
+
+.developer-credit .developer-name {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.developer-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.developer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  color: var(--color-light);
+  transition: all var(--transition-base);
+  font-size: var(--fs-small);
+}
+
+.developer-social a:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
 } 
