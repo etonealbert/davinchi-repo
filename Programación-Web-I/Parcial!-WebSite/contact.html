@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preventa y contacto para Ni Tan Biónica, Ni Tan Bizarrap. Reserva tu copia de edición limitada y contacta con nosotros.">
+    <meta name="keywords" content="preventa, contacto, reserva, Tan Biónica, Bizarrap, edición limitada, álbum">
+    
+    <title>Contacto y Preventa - Ni Tan Biónica, Ni Tan Bizarrap</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <style>
+        /* Additional styles for forms */
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+            color: var(--color-light);
+            font-family: var(--font-primary);
+        }
+        
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            background: rgba(42, 42, 42, 0.8);
+            color: var(--color-light);
+            font-family: var(--font-body);
+            font-size: var(--fs-body);
+            transition: border-color var(--transition-base);
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(161, 0, 161, 0.1);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            margin: var(--space-md) 0;
+        }
+        
+        .form-checkbox input[type="checkbox"] {
+            margin-top: 2px;
+            accent-color: var(--color-primary);
+        }
+        
+        .contact-info {
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-xl);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            padding: var(--space-md);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            transition: background var(--transition-base);
+        }
+        
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-light);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" role="banner">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">NTB x BZRP</a>
+            <button class="nav__toggle" aria-label="Abrir menú">☰</button>
+            <ul class="nav__menu">
+                <li><a href="index.html" class="nav__link">Inicio</a></li>
+                <li><a href="about.html" class="nav__link">Sobre el Artista</a></li>
+                <li><a href="album.html" class="nav__link">El Álbum</a></li>
+                <li><a href="limited-edition.html" class="nav__link">Edición Limitada</a></li>
+                <li><a href="contact.html" class="nav__link active">Preventa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 70vh;">
+            <div class="container">
+                <div class="hero__content fade-in">
+                    <h1 class="hero__title">Contacto & Preventa</h1>
+                    <p class="hero__description">
+                        Reserva tu copia de "Ni Tan Biónica, Ni Tan Bizarrap" y asegura tu lugar 
+                        en esta colaboración histórica. Contáctanos para más información.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pre-order Form Section -->
+        <section class="section section--dark">
+            <div class="container">
+                <div class="grid grid--2">
+                    <!-- Pre-order Form -->
+                    <div class="fade-in">
+                        <h2 class="mb-lg">Formulario de Preventa</h2>
+                        <div class="card">
+                            <div class="card__content">
+                                <form id="preorderForm" action="#" method="POST">
+                                    <!-- Personal Information -->
+                                    <h3 class="card__title mb-md">Información Personal</h3>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="firstName" class="form-label">Nombre *</label>
+                                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName" class="form-label">Apellido *</label>
+                                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" id="email" name="email" class="form-input" required>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label">Teléfono</label>
+                                            <input type="tel" id="phone" name="phone" class="form-input">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="country" class="form-label">País *</label>
+                                            <select id="country" name="country" class="form-select" required>
+                                                <option value="">Seleccionar país</option>
+                                                <option value="AR">Argentina</option>
+                                                <option value="MX">México</option>
+                                                <option value="CO">Colombia</option>
+                                                <option value="ES">España</option>
+                                                <option value="US">Estados Unidos</option>
+                                                <option value="CL">Chile</option>
+                                                <option value="PE">Perú</option>
+                                                <option value="UY">Uruguay</option>
+                                                <option value="other">Otro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Order Details -->
+                                    <h3 class="card__title mb-md mt-lg">Detalles del Pedido</h3>
+                                    
+                                    <div class="form-group">
+                                        <label for="albumFormat" class="form-label">Formato del Álbum *</label>
+                                        <select id="albumFormat" name="albumFormat" class="form-select" required>
+                                            <option value="">Seleccionar formato</option>
+                                            <option value="limited-edition">Edición Limitada Completa - $89.99 USD</option>
+                                            <option value="vinyl-only">Solo Vinilo Neón - $45.99 USD</option>
+                                            <option value="digital-deluxe">Versión Digital Deluxe - $15.99 USD</option>
+                                            <option value="standard-cd">CD Estándar - $19.99 USD</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="quantity" class="form-label">Cantidad</label>
+                                            <select id="quantity" name="quantity" class="form-select">
+                                                <option value="1">1 copia</option>
+                                                <option value="2">2 copias</option>
+                                                <option value="3">3 copias</option>
+                                                <option value="4">4 copias</option>
+                                                <option value="5">5+ copias (contactar)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tshirtSize" class="form-label">Talla Camiseta (Ed. Limitada)</label>
+                                            <select id="tshirtSize" name="tshirtSize" class="form-select">
+                                                <option value="">No aplicable</option>
+                                                <option value="S">Small (S)</option>
+                                                <option value="M">Medium (M)</option>
+                                                <option value="L">Large (L)</option>
+                                                <option value="XL">Extra Large (XL)</option>
+                                                <option value="XXL">Double XL (XXL)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Shipping Information -->
+                                    <h3 class="card__title mb-md mt-lg">Información de Envío</h3>
+                                    
+                                    <div class="form-group">
+                                        <label for="address" class="form-label">Dirección Completa *</label>
+                                        <textarea id="address" name="address" class="form-textarea" placeholder="Calle, número, código postal, ciudad, estado/provincia" required></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="specialInstructions" class="form-label">Instrucciones Especiales</label>
+                                        <textarea id="specialInstructions" name="specialInstructions" class="form-textarea" placeholder="Horarios de entrega preferidos, referencias, etc."></textarea>
+                                    </div>
+                                    
+                                    <!-- Newsletter and Terms -->
+                                    <div class="form-checkbox">
+                                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                        <label for="newsletter">
+                                            Quiero recibir actualizaciones sobre el álbum, lanzamientos futuros y contenido exclusivo.
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-checkbox">
+                                        <input type="checkbox" id="terms" name="terms" required>
+                                        <label for="terms">
+                                            Acepto los <a href="#" style="color: var(--color-primary);">términos y condiciones</a> y la <a href="#" style="color: var(--color-primary);">política de privacidad</a>. *
+                                        </label>
+                                    </div>
+                                    
+                                    <!-- Submit Button -->
+                                    <div class="text-center mt-lg">
+                                        <button type="submit" class="btn btn--primary btn--large">
+                                            <span>Enviar Preventa</span>
+                                        </button>
+                                        <p style="color: var(--color-accent); margin-top: var(--space-sm); font-size: var(--fs-small);">
+                                            * El pago se procesará mediante enlace seguro enviado por email
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="fade-in">
+                        <h2 class="mb-lg">Información de Contacto</h2>
+                        <div class="contact-info">
+                            <h3 class="card__title mb-lg">¿Necesitas Ayuda?</h3>
+                            <p class="mb-lg" style="color: var(--color-accent);">
+                                Estamos aquí para ayudarte con tu preventa, resolver cualquier duda 
+                                sobre el álbum o la edición limitada.
+                            </p>
+                            
+                            <!-- Contact Methods -->
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <h4 style="color: var(--color-light); margin-bottom: var(--space-xs);">Email</h4>
+                                    <p style="color: var(--color-accent); margin: 0;">
+                                        <a href="mailto:albert.lukmanov@davinci.edu.ar" style="color: var(--color-secondary);">
+                                            albert.lukmanov@davinci.edu.ar
+                                        </a>
+                                    </p>
+                                    <small style="color: var(--color-accent);">Respuesta en 24-48 horas</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <h4 style="color: var(--color-light); margin-bottom: var(--space-xs);">WhatsApp</h4>
+                                    <p style="color: var(--color-accent); margin: 0;">
+                                        <a href="https://wa.me/5491127471348" style="color: var(--color-secondary);" target="_blank" rel="noopener">
+                                            +54 911 2747-1348
+                                        </a>
+                                    </p>
+                                    <small style="color: var(--color-accent);">Lun-Vie 9:00-18:00 (GMT-3)</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">💼</div>
+                                <div>
+                                    <h4 style="color: var(--color-light); margin-bottom: var(--space-xs);">LinkedIn</h4>
+                                    <p style="color: var(--color-accent); margin: 0;">
+                                        <a href="https://www.linkedin.com/in/albert-lukmanov/" style="color: var(--color-secondary);" target="_blank" rel="noopener">
+                                            Albert Lukmanov
+                                        </a>
+                                    </p>
+                                    <small style="color: var(--color-accent);">Contacto profesional</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📸</div>
+                                <div>
+                                    <h4 style="color: var(--color-light); margin-bottom: var(--space-xs);">Instagram</h4>
+                                    <p style="color: var(--color-accent); margin: 0;">
+                                        <a href="https://www.instagram.com/etonealbert/" style="color: var(--color-secondary);" target="_blank" rel="noopener">
+                                            @etonealbert
+                                        </a>
+                                    </p>
+                                    <small style="color: var(--color-accent);">Síguenos para actualizaciones</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section section--gradient">
+            <div class="container">
+                <div class="fade-in text-center mb-xl">
+                    <h2 class="mb-lg" style="color: var(--color-light);">Preguntas Frecuentes</h2>
+                </div>
+                
+                <div class="grid grid--2">
+                    <div class="card fade-in" style="background: rgba(255,255,255,0.1);">
+                        <div class="card__content">
+                            <h3 class="card__title" style="color: var(--color-light);">¿Cuándo se envía mi pedido?</h3>
+                            <p style="color: rgba(255,255,255,0.9);">
+                                Los envíos de la edición limitada comenzarán el 15 de febrero de 2024. 
+                                Las versiones digitales estarán disponibles inmediatamente tras el lanzamiento oficial.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in" style="background: rgba(255,255,255,0.1);">
+                        <div class="card__content">
+                            <h3 class="card__title" style="color: var(--color-light);">¿Hay gastos de envío?</h3>
+                            <p style="color: rgba(255,255,255,0.9);">
+                                El envío es gratuito para la edición limitada a nivel mundial. 
+                                Para otros formatos, el envío se calcula según el destino.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in" style="background: rgba(255,255,255,0.1);">
+                        <div class="card__content">
+                            <h3 class="card__title" style="color: var(--color-light);">¿Puedo cancelar mi preventa?</h3>
+                            <p style="color: rgba(255,255,255,0.9);">
+                                Sí, puedes cancelar tu preventa hasta 48 horas antes del lanzamiento 
+                                para un reembolso completo.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in" style="background: rgba(255,255,255,0.1);">
+                        <div class="card__content">
+                            <h3 class="card__title" style="color: var(--color-light);">¿Las firmas son auténticas?</h3>
+                            <p style="color: rgba(255,255,255,0.9);">
+                                Absolutamente. Cada póster viene con certificado de autenticidad 
+                                y las firmas son realizadas personalmente por ambos artistas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Credit Section -->
+        <section class="section section--dark">
+            <div class="container">
+                <div class="fade-in text-center">
+                    <div class="card" style="max-width: 600px; margin: 0 auto; background: rgba(161, 0, 161, 0.1); border: 1px solid var(--color-primary);">
+                        <div class="card__content">
+                            <h3 class="card__title" style="color: var(--color-primary);">Desarrollo Web</h3>
+                            <p class="mb-md" style="color: var(--color-light);">
+                                Este sitio web fue desarrollado por <strong>Albert Lukmanov</strong>
+                            </p>
+                            <p class="mb-lg" style="color: var(--color-accent);">
+                                Especialista en desarrollo frontend con HTML5, CSS3 y JavaScript. 
+                                Creando experiencias web modernas y responsivas.
+                            </p>
+                            <div class="flex flex--center gap-lg">
+                                <a href="https://www.linkedin.com/in/albert-lukmanov/" 
+                                   target="_blank" rel="noopener" 
+                                   class="btn btn--secondary btn--small">
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://www.instagram.com/etonealbert/" 
+                                   target="_blank" rel="noopener" 
+                                   class="btn btn--ghost btn--small">
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="mailto:albert.lukmanov@davinci.edu.ar" 
+                                   class="btn btn--primary btn--small">
+                                    <span>Contactar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section section--gradient">
+            <div class="container">
+                <div class="fade-in text-center">
+                    <h2 class="mb-md" style="color: var(--color-light);">¿Listo para la Preventa?</h2>
+                    <p class="mb-lg" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto var(--space-lg);">
+                        No esperes más. Las copias de edición limitada se agotan rápidamente y esta 
+                        colaboración histórica no se repetirá.
+                    </p>
+                    <div class="flex flex--center gap-lg flex-wrap">
+                        <a href="#preorderForm" class="btn btn--ghost btn--large">
+                            <span>Completar Preventa</span>
+                        </a>
+                        <a href="limited-edition.html" class="btn btn--secondary">
+                            <span>Ver Edición Limitada</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Artistas</h3>
+                    <ul class="footer__links">
+                        <li><a href="about.html">Tan Biónica</a></li>
+                        <li><a href="about.html">Bizarrap</a></li>
+                        <li><a href="about.html">Colaboración</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3>Álbum</h3>
+                    <ul class="footer__links">
+                        <li><a href="album.html">Tracklist</a></li>
+                        <li><a href="album.html">Muestras</a></li>
+                        <li><a href="limited-edition.html">Edición Limitada</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3>Comprar</h3>
+                    <ul class="footer__links">
+                        <li><a href="contact.html">Preventa</a></li>
+                        <li><a href="limited-edition.html">Coleccionista</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3>Desarrollador</h3>
+                    <div class="mb-sm">
+                        <p style="color: var(--color-accent); font-size: var(--fs-small);">
+                            Sitio web desarrollado por
+                        </p>
+                        <p style="color: var(--color-primary); font-weight: 600;">
+                            Albert Lukmanov
+                        </p>
+                    </div>
+                    <div class="flex gap-sm">
+                        <a href="https://www.linkedin.com/in/albert-lukmanov/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/etonealbert/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:albert.lukmanov@davinci.edu.ar" class="social-icon" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.909L12 11.64l9.455-7.819h.909c.904 0 1.636.732 1.636 1.636z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Ni Tan Biónica, Ni Tan Bizarrap. Todos los derechos reservados.</p>
+                <p>Sitio web desarrollado por <strong>Albert Lukmanov</strong> | HTML5, CSS3 & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav__toggle');
+            const navMenu = document.querySelector('.nav__menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    const isOpen = navMenu.classList.contains('active');
+                    navMenu.classList.toggle('active');
+                    navToggle.setAttribute('aria-expanded', !isOpen);
+                });
+            }
+            
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Form handling
+            const preorderForm = document.getElementById('preorderForm');
+            if (preorderForm) {
+                preorderForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simple form validation
+                    const requiredFields = preorderForm.querySelectorAll('[required]');
+                    let isValid = true;
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.style.borderColor = '#ff4757';
+                        } else {
+                            field.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                        }
+                    });
+                    
+                    if (isValid) {
+                        alert('¡Gracias por tu preventa! Te enviaremos un email con los detalles de pago en las próximas 24 horas.');
+                        preorderForm.reset();
+                    } else {
+                        alert('Por favor, completa todos los campos obligatorios.');
+                    }
+                });
+            }
+            
+            // Dynamic album format change
+            const albumFormat = document.getElementById('albumFormat');
+            const tshirtSize = document.getElementById('tshirtSize');
+            
+            if (albumFormat && tshirtSize) {
+                albumFormat.addEventListener('change', function() {
+                    if (this.value === 'limited-edition') {
+                        tshirtSize.disabled = false;
+                        tshirtSize.required = true;
+                    } else {
+                        tshirtSize.disabled = true;
+                        tshirtSize.required = false;
+                        tshirtSize.value = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
