@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mantenimiento - Ni Tan Biónica, Ni Tan Bizarrap. El sitio está temporalmente en mantenimiento.">
+    <meta name="keywords" content="mantenimiento, maintenance, Tan Biónica, Bizarrap, sitio web">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/images/icons/site.webmanifest">
+    
+    <title>Mantenimiento | Ni Tan Biónica, Ni Tan Bizarrap</title>
+    
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <style>
+        /* Maintenance Page Specific Styles */
+        .maintenance-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--gradient-dark);
+            overflow: hidden;
+        }
+        
+        .maintenance-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/images/backgrounds/neon-abstract.png') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .maintenance-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: var(--space-xl);
+        }
+        
+        .maintenance-icon {
+            font-size: clamp(6rem, 12vw, 10rem);
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--space-lg);
+            animation: pulse-rotate 3s ease-in-out infinite;
+        }
+        
+        .maintenance-title {
+            font-family: var(--font-primary);
+            font-size: var(--fs-h1);
+            color: var(--color-light);
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .maintenance-subtitle {
+            font-family: var(--font-display);
+            font-size: var(--fs-h3);
+            color: var(--color-secondary);
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .maintenance-description {
+            font-size: var(--fs-body);
+            color: var(--color-accent);
+            margin-bottom: var(--space-xl);
+            line-height: 1.8;
+        }
+        
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--space-xl);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--color-secondary);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .eta-timer {
+            font-family: var(--font-display);
+            font-size: var(--fs-h3);
+            color: var(--color-primary);
+            margin: var(--space-lg) 0;
+            text-align: center;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: var(--space-md) 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 4px;
+            animation: progress 4s ease-in-out infinite;
+        }
+        
+        .musical-wave {
+            position: absolute;
+            color: var(--color-primary);
+            opacity: 0.2;
+            font-size: 1.5rem;
+            animation: wave 4s ease-in-out infinite;
+        }
+        
+        .musical-wave:nth-child(1) {
+            top: 15%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .musical-wave:nth-child(2) {
+            top: 25%;
+            right: 10%;
+            animation-delay: -1s;
+        }
+        
+        .musical-wave:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: -2s;
+        }
+        
+        .musical-wave:nth-child(4) {
+            bottom: 30%;
+            right: 5%;
+            animation-delay: -3s;
+        }
+        
+        .musical-wave:nth-child(5) {
+            top: 50%;
+            left: 3%;
+            animation-delay: -0.5s;
+        }
+        
+        .musical-wave:nth-child(6) {
+            top: 60%;
+            right: 8%;
+            animation-delay: -1.5s;
+        }
+        
+        @keyframes pulse-rotate {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(5deg) scale(1.05);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+        
+        @keyframes progress {
+            0% {
+                width: 0%;
+            }
+            50% {
+                width: 60%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+        
+        @keyframes wave {
+            0%, 100% {
+                transform: translateY(0px) scale(1);
+                opacity: 0.2;
+            }
+            25% {
+                transform: translateY(-10px) scale(1.1);
+                opacity: 0.4;
+            }
+            50% {
+                transform: translateY(-5px) scale(0.9);
+                opacity: 0.3;
+            }
+            75% {
+                transform: translateY(-15px) scale(1.05);
+                opacity: 0.5;
+            }
+        }
+        
+        .social-links {
+            margin-top: var(--space-xl);
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--color-light);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-link:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        @media (max-width: 768px) {
+            .maintenance-content {
+                padding: var(--space-md);
+            }
+            
+            .musical-wave {
+                font-size: 1rem;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+        
+        /* Hide navigation for maintenance mode */
+        .header {
+            display: none;
+        }
+        
+        body {
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Maintenance Hero Section -->
+        <section class="maintenance-hero" aria-labelledby="maintenance-title">
+            <!-- Floating Musical Waves -->
+            <div class="musical-wave" aria-hidden="true">〰️</div>
+            <div class="musical-wave" aria-hidden="true">〰️</div>
+            <div class="musical-wave" aria-hidden="true">〰️</div>
+            <div class="musical-wave" aria-hidden="true">〰️</div>
+            <div class="musical-wave" aria-hidden="true">〰️</div>
+            <div class="musical-wave" aria-hidden="true">〰️</div>
+            
+            <div class="maintenance-content fade-in">
+                <div class="maintenance-icon" aria-hidden="true">🔧</div>
+                <h1 id="maintenance-title" class="maintenance-title">Mantenimiento</h1>
+                <h2 class="maintenance-subtitle">Afinando los Instrumentos</h2>
+                
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>Sistema en mantenimiento activo</span>
+                </div>
+                
+                <p class="maintenance-description">
+                    Estamos trabajando para mejorar tu experiencia musical. 
+                    Nuestro equipo está afinando cada detalle para que puedas disfrutar 
+                    de la mejor colaboración entre Tan Biónica y Bizarrap.
+                </p>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                
+                <div class="eta-timer">
+                    <p>Tiempo estimado de regreso:</p>
+                    <div id="countdown" style="font-size: var(--fs-h2); margin-top: var(--space-sm);">
+                        --:--:--
+                    </div>
+                </div>
+                
+                <p style="color: var(--color-accent); margin-top: var(--space-lg);">
+                    Mientras tanto, síguenos en nuestras redes sociales para no perderte ninguna novedad:
+                </p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook" title="Facebook">
+                        📘
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+                        📷
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter" title="Twitter">
+                        🐦
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube" title="YouTube">
+                        📺
+                    </a>
+                    <a href="#" class="social-link" aria-label="Spotify" title="Spotify">
+                        🎵
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript for Countdown and Animations -->
+    <script>
+        // Countdown timer (set to 2 hours from now as example)
+        function startCountdown() {
+            const targetTime = new Date().getTime() + (2 * 60 * 60 * 1000); // 2 hours from now
+            
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = targetTime - now;
+                
+                if (timeLeft > 0) {
+                    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    
+                    document.getElementById('countdown').textContent = 
+                        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    document.getElementById('countdown').textContent = '¡Ya disponible!';
+                    clearInterval(countdownInterval);
+                }
+            }
+            
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        }
+
+        // Add entrance animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Start countdown
+            startCountdown();
+            
+            // Fade in animation
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 300);
+            });
+            
+            // Auto-refresh page every 5 minutes to check if maintenance is over
+            setTimeout(() => {
+                window.location.reload();
+            }, 5 * 60 * 1000);
+        });
+
+        // Add visual feedback for social links
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Add a temporary visual effect
+                const ripple = document.createElement('div');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                
+                const rect = link.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = rect.left + rect.width / 2 - size / 2 + 'px';
+                ripple.style.top = rect.top + rect.height / 2 - size / 2 + 'px';
+                
+                document.body.appendChild(ripple);
+                
+                setTimeout(() => {
+                    document.body.removeChild(ripple);
+                }, 600);
+            });
+        });
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html> 

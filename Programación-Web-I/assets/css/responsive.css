@@ -1,0 +1,527 @@
+/* ============================================================================
+   RESPONSIVE DESIGN - NI TAN BIÓNICA, NI TAN BIZARRAP
+   Mobile-First Responsive Architecture
+   ============================================================================ */
+
+/* Mobile First Base Styles (320px+) */
+/* Already defined in main styles.css */
+
+/* Large Mobile / Small Tablet (480px+) */
+@media screen and (min-width: 480px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+  
+  .hero__cta {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .nav__menu {
+    gap: var(--space-md);
+  }
+  
+  .album-cover {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .grid--2 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .card {
+    padding: var(--space-lg) var(--space-xl);
+  }
+}
+
+/* Tablet Portrait (768px+) */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: var(--space-lg);
+    --fs-h1: clamp(3rem, 6vw, 5rem);
+    --fs-h2: clamp(2.5rem, 5vw, 4rem);
+  }
+  
+  .section {
+    padding: calc(var(--space-xxl) * 1.5) 0;
+  }
+  
+  .hero {
+    padding: 0 var(--space-xl);
+  }
+  
+  .hero__description {
+    font-size: 1.5rem;
+  }
+  
+  .nav__menu {
+    gap: var(--space-xl);
+  }
+  
+  .nav__logo {
+    font-size: 2rem;
+  }
+  
+  /* Navigation improvements for tablet */
+  .nav {
+    padding: var(--space-md) 0;
+  }
+  
+  /* Album cover size adjustment */
+  .album-cover {
+    width: 400px;
+    height: 400px;
+  }
+  
+  /* Grid improvements */
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--3 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Footer layout for tablet */
+  .footer__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+  
+  /* Tracklist layout improvements */
+  .tracklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  /* Card layout improvements */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+  }
+}
+
+/* Tablet Landscape / Small Desktop (1024px+) */
+@media screen and (min-width: 1024px) {
+  :root {
+    --container-padding: var(--space-xl);
+  }
+  
+  .container {
+    max-width: 1000px;
+  }
+  
+  .hero {
+    min-height: 100vh;
+    padding: 0;
+  }
+  
+  .hero__content {
+    max-width: 900px;
+  }
+  
+  /* Navigation for desktop */
+  .nav__menu {
+    gap: calc(var(--space-xl) * 1.5);
+  }
+  
+  .nav__link {
+    font-size: 1.125rem;
+  }
+  
+  /* Album cover desktop size */
+  .album-cover {
+    width: 450px;
+    height: 450px;
+  }
+  
+  /* Grid system improvements */
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Footer layout for desktop */
+  .footer__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Enhanced hover effects for desktop */
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+  
+  /* Tracklist desktop layout */
+  .tracklist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Limited edition gallery */
+  .limited-edition-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* Large Desktop (1200px+) */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: var(--max-width);
+  }
+  
+  :root {
+    --fs-h1: clamp(3.5rem, 6vw, 6rem);
+    --fs-h2: clamp(3rem, 5vw, 5rem);
+  }
+  
+  .section {
+    padding: calc(var(--space-xxl) * 2) 0;
+  }
+  
+  .hero__description {
+    font-size: 1.75rem;
+  }
+  
+  /* Album cover large desktop */
+  .album-cover {
+    width: 500px;
+    height: 500px;
+  }
+  
+  /* Enhanced grid layouts */
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .footer__content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Tracklist full desktop layout */
+  .tracklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Limited edition full gallery */
+  .limited-edition-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Ultra Wide Desktop (1440px+) */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero__content {
+    max-width: 1000px;
+  }
+  
+  .section {
+    padding: calc(var(--space-xxl) * 2.5) 0;
+  }
+}
+
+/* Mobile Navigation Styles */
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav__menu.active {
+    display: flex;
+  }
+  
+  .nav__toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--space-xs);
+  }
+  
+  .nav__link {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 1.125rem;
+  }
+  
+  .nav__link:last-child {
+    border-bottom: none;
+  }
+  
+  /* Mobile hero adjustments */
+  .hero {
+    min-height: 90vh;
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .hero__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .hero__description {
+    font-size: 1.125rem;
+  }
+  
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Mobile album cover */
+  .album-cover {
+    width: 280px;
+    height: 280px;
+    margin: var(--space-lg) auto;
+  }
+  
+  /* Mobile cards */
+  .card {
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+  
+  /* Mobile tracklist */
+  .tracklist {
+    display: block;
+  }
+  
+  .tracklist__item {
+    margin-bottom: var(--space-sm);
+    padding: var(--space-sm);
+    border-radius: var(--border-radius);
+    background: rgba(42, 42, 42, 0.5);
+  }
+  
+  /* Mobile footer */
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    text-align: center;
+  }
+  
+  /* Mobile form adjustments */
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    font-size: 1rem;
+  }
+}
+
+/* Hide mobile toggle on desktop */
+@media screen and (min-width: 768px) {
+  .nav__toggle {
+    display: none;
+  }
+  
+  .nav__menu {
+    display: flex !important;
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    flex-direction: row;
+    padding: 0;
+    border-top: none;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (pointer: coarse) {
+  .btn {
+    min-height: 48px;
+    min-width: 48px;
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .nav__link {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  .card {
+    cursor: default;
+  }
+  
+  /* Disable hover effects on touch devices */
+  .card:hover {
+    transform: none;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .album-cover:hover .album-cover__image {
+    transform: none;
+    filter: drop-shadow(0 0 20px rgba(161, 0, 161, 0.4));
+    animation: albumPulse 3s ease-in-out infinite;
+  }
+}
+
+/* High DPI Display Optimizations */
+@media screen and (min-resolution: 2dppx) {
+  .album-cover__image,
+  .artist-photo,
+  .limited-edition-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  .header,
+  .nav,
+  .footer,
+  .btn,
+  .audio-player {
+    display: none !important;
+  }
+  
+  .hero {
+    min-height: auto;
+    page-break-after: always;
+  }
+  
+  .section {
+    padding: 1rem 0;
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  .card {
+    border: 1px solid #000;
+    page-break-inside: avoid;
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding: var(--space-md);
+  }
+  
+  .hero__title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  .album-cover {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .section {
+    padding: var(--space-xl) 0;
+  }
+}
+
+/* Dark Mode Support (if user prefers dark mode) */
+@media (prefers-color-scheme: dark) {
+  /* Already using dark theme, but can enhance */
+  :root {
+    --color-dark: #0A0A0A;
+    --color-dark-secondary: #1F1F1F;
+  }
+}
+
+/* Accessibility: Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+  .album-cover__image {
+    animation: none;
+  }
+  
+  .particle {
+    animation: none;
+  }
+  
+  .audio-bar {
+    animation: none;
+  }
+  
+  .glitch-text::before,
+  .glitch-text::after {
+    animation: none;
+  }
+  
+  .vinyl-record {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: #FF00FF;
+    --color-secondary: #00FFFF;
+    --color-light: #FFFFFF;
+    --color-dark: #000000;
+    --color-accent: #CCCCCC;
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+  
+  .card {
+    border: 1px solid var(--color-accent);
+  }
+}
+
+/* Container Queries Support (Progressive Enhancement) */
+@supports (container-type: inline-size) {
+  .card-container {
+    container-type: inline-size;
+  }
+  
+  @container (min-width: 300px) {
+    .card {
+      padding: var(--space-lg);
+    }
+  }
+  
+  @container (min-width: 500px) {
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--space-md);
+    }
+  }
+} 

@@ -1,0 +1,22 @@
+{
+    "name": "Ni Tan Biónica, Ni Tan Bizarrap",
+    "short_name": "NTB x BZRP",
+    "description": "La colaboración épica entre Tan Biónica y Bizarrap. Fusión única de pop-rock y electronic/trap.",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#a100a1",
+    "background_color": "#1a1a1a",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+} 
