@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Ejercicio 1: Programa para registrar 5 números enteros positivos,
  * mostrar los números en posiciones impares y buscar un número específico.
  * 
- * @author Sistema
+ * @author Albert Lukmanov
  * @version 1.0
  */
 public class Ejercicio1 {
