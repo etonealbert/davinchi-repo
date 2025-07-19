@@ -1,8 +1,7 @@
 # 📋 ENTREGA FINAL - Juego del Ahorcado
 
-**Estudiante**: [Tu Nombre]  
+**Estudiante**: Albert Lukmanov 
 **Proyecto**: Juego del Ahorcado - Programación Básica  
-**Fecha de Entrega**: [Fecha Actual]
 
 ---
 
