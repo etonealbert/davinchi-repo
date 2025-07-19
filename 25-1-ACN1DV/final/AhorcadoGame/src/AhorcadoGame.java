@@ -3,8 +3,7 @@ import java.util.Random;
 
 /**
  * Juego del Ahorcado - Proyecto Final
- * Autor: [Tu Nombre]
- * Fecha: [Fecha Actual]
+ * Autor: Albert Lukmanov
  * 
  * Este programa implementa el clásico juego del Ahorcado utilizando
  * únicamente estructuras de programación básicas de Java.

@@ -114,9 +114,8 @@ El juego incluye 15 palabras relacionadas con programación:
 
 ## 👨‍💻 Autor
 
-**Nombre**: [Tu Nombre]  
+**Nombre**: Albert Lukmanov
 **Proyecto**: Juego del Ahorcado - Programación Básica  
-**Fecha**: [Fecha Actual]
 
 ## 📝 Notas de Desarrollo
 

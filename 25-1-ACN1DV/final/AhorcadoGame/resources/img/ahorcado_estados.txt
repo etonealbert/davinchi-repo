@@ -1,0 +1,67 @@
+# Estados Visuales del Ahorcado
+# Simulación de imágenes con arte ASCII
+# Cada estado representa un nivel de error en el juego
+
+=== ESTADO 0: SIN ERRORES ===
+      
+      
+      
+      
+      
+      
+
+=== ESTADO 1: BASE DE LA HORCA ===
+  +---
+  |   
+  |   
+  |   
+  |   
+──┴───
+
+=== ESTADO 2: POSTE VERTICAL ===
+  +---
+  |  |
+  |   
+  |   
+  |   
+──┴───
+
+=== ESTADO 3: CABEZA ===
+  +---
+  |  |
+  |  O
+  |   
+  |   
+──┴───
+
+=== ESTADO 4: CUERPO ===
+  +---
+  |  |
+  |  O
+  |  |
+  |   
+──┴───
+
+=== ESTADO 5: BRAZO IZQUIERDO ===
+  +---
+  |  |
+  |  O
+  | /|
+  |   
+──┴───
+
+=== ESTADO 6: AHORCADO COMPLETO ===
+  +---
+  |  |
+  |  O
+  | /|\
+  | / 
+──┴───
+
+================================
+Descripción técnica:
+- Cada estado se representa con una matriz 6x6 de caracteres
+- Los caracteres especiales (═, ║, ╔, etc.) se usan para decoración
+- El progreso es visual y acumulativo
+- Estado 6 = Derrota del jugador
+================================ 
