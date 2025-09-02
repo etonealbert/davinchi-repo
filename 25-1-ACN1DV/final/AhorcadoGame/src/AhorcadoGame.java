@@ -1,20 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
 
-/**
- * Juego del Ahorcado - Proyecto Final
- * Autor: Albert Lukmanov
- * 
- * Este programa implementa el clásico juego del Ahorcado utilizando
- * únicamente estructuras de programación básicas de Java.
- * 
- * Requisitos técnicos implementados:
- * - Tres estructuras de repetición diferentes (for, while, do-while)
- * - Arrays y matrices para almacenar datos
- * - Control de selección múltiple (switch, if-else)
- * - Declaraciones condicionales con operadores lógicos
- * - Simulación de imágenes con arte ASCII
- */
 public class AhorcadoGame {
     
     public static void main(String[] args) {
