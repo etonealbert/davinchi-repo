@@ -1,50 +1,41 @@
 /**
- * UniversitySystem - Main program to test the university system
- * Demonstrates the relationships between Asignatura, Profesor, and Departamento
+ * UniversitySystem 
  * 
  * Author: Albert Lukmanov (albert.lukmanov@davinci.edu.ar)
  */
 public class UniversitySystem {
     
     public static void main(String[] args) {
-        // Local variable: Create an Asignatura (Course)
         Asignatura course = new Asignatura(
-            "Programación Orientada a Objetos",  // nombre
-            "S0D23-POO",                          // codigo
-            3                                      // semestre
+            "Programación Orientada a Objetos", 
+            "S0D23-POO",                         
+            3                                    
         );
         
-        // Local variable: Create a Profesor who teaches this course
         Profesor professor = new Profesor(
-            "Dr. María González",  // nombre
-            "PROF-001",            // id
-            course                 // asignatura
+            "Dr. María González", 
+            "PROF-001",            
+            course                
         );
         
-        // Local variable: Create a Departamento with this professor
         Departamento department = new Departamento(
-            "Departamento de Sistemas",  // nombre
-            "DEPT-CS-001",               // id
-            professor                    // profesor
+            "Departamento de Sistemas",  
+            "DEPT-CS-001",              
+            professor                  
         );
         
-        // Display the complete information
         System.out.println("========================================");
         System.out.println("  SISTEMA UNIVERSITARIO - DEMO");
         System.out.println("========================================\n");
         
-        // Method 1: Using the custom displayInfo() method
         department.displayInfo();
         
-        // Add some spacing
         System.out.println("\n");
         
-        // Method 2: Using toString() method (shows the full nested structure)
         System.out.println("=== USANDO toString() ===");
         System.out.println(department.toString());
         System.out.println("\n");
         
-        // Demonstrate the relationships
         System.out.println("=== VERIFICACIÓN DE RELACIONES ===");
         System.out.println("El departamento '" + department.getNombre() + 
                          "' tiene al profesor '" + department.getProfesor().getNombre() + "'");
