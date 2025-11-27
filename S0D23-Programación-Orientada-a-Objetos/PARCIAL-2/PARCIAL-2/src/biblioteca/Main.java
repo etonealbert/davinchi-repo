@@ -1,5 +1,5 @@
 // FILE: PARCIAL-2/src/biblioteca/Main.java
-// Autor: Albert Lukmanov - Escuela Da Vinci - Analista de Sistemas - CABA, Buenos Aires
+// Autor: Albert Lukmanov 
 // Descripción: Clase principal con escenarios de prueba del Sistema de Biblioteca.
 
 package biblioteca;
@@ -23,7 +23,7 @@ public class Main {
         System.out.println("╔══════════════════════════════════════════════════════════════╗");
         System.out.println("║     SISTEMA DE BIBLIOTECA - PARCIAL 2                        ║");
         System.out.println("║     Escuela Da Vinci - Analista de Sistemas                  ║");
-        System.out.println("║     Autor: Albert Lukmanov - CABA, Buenos Aires              ║");
+        System.out.println("║     Autor: Albert Lukmanov                                   ║");
         System.out.println("╚══════════════════════════════════════════════════════════════╝");
 
         // =====================================================
@@ -31,7 +31,6 @@ public class Main {
         // =====================================================
         System.out.println("\n\n▶▶▶ 1. CREANDO LA BIBLIOTECA ◀◀◀");
         
-        // Variable de referencia (Biblioteca) - almacena referencia a un objeto en el heap
         Biblioteca biblioteca = new Biblioteca(
             "Biblioteca Da Vinci", 
             "Av. Corrientes 2037, CABA, Buenos Aires"
@@ -42,7 +41,6 @@ public class Main {
         // =====================================================
         System.out.println("\n\n▶▶▶ 2. REGISTRANDO AUTORES ◀◀◀");
         
-        // Variables de referencia (Autor) - cada una apunta a un objeto Autor en el heap
         Autor autorBorges = new Autor(
             "Jorge Luis Borges", 
             "Argentina", 
@@ -67,22 +65,17 @@ public class Main {
             LocalDate.of(1904, 7, 12)
         );
         
-        // Constructor sobrecargado sin fecha de nacimiento
         Autor autorShakespeare = new Autor("William Shakespeare", "Inglaterra");
 
-        // Agregar autores a la biblioteca
         biblioteca.agregarAutor(autorBorges);
         biblioteca.agregarAutor(autorCortazar);
         biblioteca.agregarAutor(autorGarciaMa);
         biblioteca.agregarAutor(autorNeruda);
         biblioteca.agregarAutor(autorShakespeare);
 
-        // =====================================================
-        // 3. CREAR LIBROS (con constructores sobrecargados)
-        // =====================================================
+
         System.out.println("\n\n▶▶▶ 3. CATALOGANDO LIBROS ◀◀◀");
         
-        // Constructor COMPLETO (sobrecarga con más parámetros)
         Libro libroFicciones = new Libro(
             "Ficciones", 
             TipoLibro.NOVELA, 
@@ -107,7 +100,6 @@ public class Main {
             autorGarciaMa
         );
         
-        // Constructor BÁSICO (sobrecarga con menos parámetros)
         Libro libroVeintePoemas = new Libro(
             "Veinte poemas de amor", 
             TipoLibro.POESIA, 
@@ -153,7 +145,6 @@ public class Main {
         Copia copiaHamlet1 = new Copia("HAM-001", libroHamlet);
         Copia copiaHamlet2 = new Copia("HAM-002", libroHamlet);
 
-        // Agregar copias a la biblioteca
         biblioteca.agregarCopia(copiaFicciones1);
         biblioteca.agregarCopia(copiaFicciones2);
         biblioteca.agregarCopia(copiaRayuela1);
@@ -191,7 +182,6 @@ public class Main {
             "favaloro@davinci.edu.ar"
         );
 
-        // Agregar lectores a la biblioteca
         biblioteca.agregarLector(lectorMessi);
         biblioteca.agregarLector(lectorMaradona);
         biblioteca.agregarLector(lectorAlbert);
@@ -203,10 +193,8 @@ public class Main {
         System.out.println("\n\n▶▶▶ 6. ESTADO INICIAL DE LA BIBLIOTECA ◀◀◀");
         System.out.println(biblioteca);
         
-        // Mostrar libros catalogados
         biblioteca.mostrarLibros();
         
-        // Mostrar lectores registrados
         biblioteca.mostrarLectores();
 
         // =====================================================
@@ -214,12 +202,10 @@ public class Main {
         // =====================================================
         System.out.println("\n\n▶▶▶ 7. ESCENARIO: PRÉSTAMOS EXITOSOS ◀◀◀");
         
-        // Lionel Messi pide 3 libros (el máximo permitido)
         biblioteca.realizarPrestamo(copiaFicciones1, lectorMessi);
         biblioteca.realizarPrestamo(copiaRayuela1, lectorMessi);
         biblioteca.realizarPrestamo(copiaCienAnios1, lectorMessi);
 
-        // Albert pide 1 libro
         biblioteca.realizarPrestamo(copiaHamlet1, lectorAlbert);
 
         // =====================================================
@@ -249,10 +235,8 @@ public class Main {
         System.out.println("\n\n▶▶▶ 10. ESCENARIO: PRÉSTAMO VENCIDO (MULTA) ◀◀◀");
         System.out.println("Simulando un préstamo realizado hace 45 días (vencido)...");
         
-        // Variable primitiva (int) - días en el pasado
         int diasEnPasado = 45;
         
-        // Variable de referencia (LocalDate) - fecha de inicio simulada
         LocalDate fechaAntigua = LocalDate.now().minusDays(diasEnPasado);
         
         // Diego Maradona pide un libro con fecha antigua (simulando préstamo vencido)
@@ -270,7 +254,6 @@ public class Main {
             System.out.println("  Días de exceso: " + (prestamoVencido.calcularDiasPrestamo() - Prestamo.DIAS_MAXIMOS_PRESTAMO));
         }
         
-        // Verificar y aplicar multas
         biblioteca.verificarMultas();
 
         // =====================================================
@@ -318,19 +301,16 @@ public class Main {
         // =====================================================
         System.out.println("\n\n▶▶▶ 14. DEMOSTRACIÓN: MÉTODOS SOBRECARGADOS ◀◀◀");
         
-        // Búsqueda por nombre (String)
         System.out.println("\n--- Búsqueda por nombre: 'Rayuela' ---");
         for (Libro libro : biblioteca.buscarLibros("Rayuela")) {
             System.out.println("  Encontrado: " + libro);
         }
         
-        // Búsqueda por autor (Autor)
         System.out.println("\n--- Búsqueda por autor: Borges ---");
         for (Libro libro : biblioteca.buscarLibros(autorBorges)) {
             System.out.println("  Encontrado: " + libro);
         }
         
-        // Búsqueda por tipo (TipoLibro)
         System.out.println("\n--- Búsqueda por tipo: NOVELA ---");
         for (Libro libro : biblioteca.buscarLibros(TipoLibro.NOVELA)) {
             System.out.println("  Encontrado: " + libro);
